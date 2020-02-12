@@ -1,0 +1,3 @@
+noEncodeFields: ['slug']
+omitFields: []
+duplicatableModels: []

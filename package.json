@@ -1,0 +1,31 @@
+{
+  "name": "stackbit-azimuth-theme",
+  "description": "Stackbit Azimuth Theme",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build --prefix-paths",
+    "serve": "gatsby serve",
+    "import-space": "node ./contentful-space-import/import.js"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "contentful-import": "^7.7.0",
+    "gatsby": "2.19.16",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-sass": "^2.1.28",
+    "gatsby-source-contentful": "^2.1.85",
+    "lodash": "^4.17.15",
+    "marked": "^0.8.0",
+    "moment": "^2.23.0",
+    "moment-strftime": "^0.5.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-html-parser": "^2.0.2",
+    "react-script-tag": "^1.1.2"
+  }
+}
