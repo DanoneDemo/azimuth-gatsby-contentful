@@ -3,7 +3,7 @@ publish = "public"
 command = "npm run build"
 
 [context.production]
-  environment = { CONTENTFUL_ENVIRONMENT = "master" }
+  environment = { CONTENTFUL_ENVIRONMENT = "master", STACKBIT_PROJECT_ID = "5e457245bad55aa918839213", WIDGET_URL = "https://widget.stackbit.com/init.js" }
 
 [context.staging]
-  environment = { CONTENTFUL_ENVIRONMENT = "staging" }
+  environment = { CONTENTFUL_ENVIRONMENT = "staging", STACKBIT_PROJECT_ID = "5e45c11d09cc5f1572e0b9e5", WIDGET_URL = "https://staging.widget.stackbit.com/init.js" }
