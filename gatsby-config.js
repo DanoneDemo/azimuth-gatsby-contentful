@@ -8,7 +8,7 @@ module.exports = {
             resolve: `gatsby-source-contentful`,
             options: {
                 spaceId: process.env.CONTENTFUL_SPACE_ID,
-                environment: `master`,
+                environment: process.env.CONTENTFUL_ENVIRONMENT || 'master',
                 accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
                 host: `cdn.contentful.com`,
                 useNameForId: false
