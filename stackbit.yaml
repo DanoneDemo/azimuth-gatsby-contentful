@@ -1,3 +1,16 @@
 noEncodeFields: ['slug']
 omitFields: []
 duplicatableModels: []
+pageModels:
+  - modelName: landing
+    label: Landing Page
+    slugField: slug
+    url: "/%slug%"
+  - modelName: page
+    label: Page
+    slugField: slug
+    url: "/%slug%"
+  - modelName: post
+    label: Post
+    slugField: slug
+    url: "/posts/%slug%"
