@@ -3,7 +3,7 @@ import _ from 'lodash';
 import moment from 'moment-strftime';
 import {graphql, useStaticQuery} from 'gatsby';
 
-import {Link, markdownify, safePrefix} from '../utils';
+import {Link, markdownify, postUrl} from '../utils';
 
 export const query = graphql`
   fragment SectionPostsFragment on ContentfulSectionPosts {
@@ -76,13 +76,13 @@ export default (props) => {
                         <article key={post_idx} className="post post-card">
                             <div className="post-card-inside">
                                 {_.get(post, 'thumb_img_path') &&
-                                <Link className="post-card-thumbnail" to={safePrefix(_.get(post, 'slug'))}>
+                                <Link className="post-card-thumbnail" to={postUrl(post)}>
                                     <img className="thumbnail" src={_.get(post, 'thumb_img_path.file.url')} alt={_.get(post, 'title.title')} />
                                 </Link>
                                 }
                                 <div className="post-card-content">
                                     <header className="post-header">
-                                        <h3 className="post-title"><Link to={safePrefix(_.get(post, 'slug'))} rel="bookmark">{_.get(post, 'title.title')}</Link></h3>
+                                        <h3 className="post-title"><Link to={postUrl(post)} rel="bookmark">{_.get(post, 'title.title')}</Link></h3>
                                     </header>
                                     <div className="post-excerpt">
                                         {markdownify(_.get(post, 'excerpt.excerpt'))}

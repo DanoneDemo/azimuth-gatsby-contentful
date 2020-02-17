@@ -4,13 +4,13 @@ import moment from 'moment-strftime';
 import {graphql} from 'gatsby';
 
 import {Layout} from '../components/index';
-import {Link, markdownify, safePrefix} from '../utils';
+import {Link, markdownify, postUrl} from '../utils';
 export const query = graphql`
-  query BlogQuery($slug: String!) {
+  query BlogQuery($contentfulId: String!) {
     contentfulConfig {
       ...LayoutFragment
     }
-    contentfulBlog(slug: { eq: $slug }) {
+    contentfulBlog(contentful_id: { eq: $contentfulId }) {
       sys {
         contentType {
           sys {
@@ -64,13 +64,13 @@ export default class Blog extends React.Component {
                                 <article key={post_idx} className="post post-card">
                                     <div className="post-card-inside">
                                         {_.get(post, 'thumb_img_path') &&
-                                        <Link className="post-card-thumbnail" to={safePrefix(_.get(post, 'slug'))}>
+                                        <Link className="post-card-thumbnail" to={postUrl(post)}>
                                             <img className="thumbnail" src={_.get(post, 'thumb_img_path.file.url')} alt={_.get(post, 'title.title')} />
                                         </Link>
                                         }
                                         <div className="post-card-content">
                                             <header className="post-header">
-                                                <h2 className="post-title"><Link to={safePrefix(_.get(post, 'slug'))} rel="bookmark">{_.get(post, 'title.title')}</Link></h2>
+                                                <h2 className="post-title"><Link to={postUrl(post)} rel="bookmark">{_.get(post, 'title.title')}</Link></h2>
                                             </header>
                                             <div className="post-excerpt">
                                                 {markdownify(_.get(post, 'excerpt.excerpt'))}

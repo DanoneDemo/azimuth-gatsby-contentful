@@ -2526,7 +2526,7 @@
         {
           "fieldId": "slug",
           "settings": {
-            "helpText": "The URL path of this page relative to site root. For example, the site root page would be \"/\", and post page would be \"posts/new-post/\""
+            "helpText": "A string used to generate the URL path of this page."
           },
           "widgetId": "slugEditor",
           "widgetNamespace": "builtin"
@@ -2965,7 +2965,7 @@
         {
           "fieldId": "slug",
           "settings": {
-            "helpText": "The URL path of this page relative to site root. For example, the site root page would be \"/\", and post page would be \"posts/new-post/\""
+            "helpText": "A string used to generate the URL path of this page."
           },
           "widgetId": "slugEditor",
           "widgetNamespace": "builtin"
@@ -3361,7 +3361,7 @@
         {
           "fieldId": "slug",
           "settings": {
-            "helpText": "The URL path of this page relative to site root. For example, the site root page would be \"/\", and post page would be \"posts/new-post/\""
+            "helpText": "A string used to generate the URL path of this page."
           },
           "widgetId": "slugEditor",
           "widgetNamespace": "builtin"
@@ -4093,7 +4093,7 @@
         {
           "fieldId": "slug",
           "settings": {
-            "helpText": "The URL path of this page relative to site root. For example, the site root page would be \"/\", and post page would be \"posts/new-post/\""
+            "helpText": "A string used to generate the URL path of this page."
           },
           "widgetId": "slugEditor",
           "widgetNamespace": "builtin"
@@ -4517,7 +4517,7 @@
           "en-US": "Blog"
         },
         "slug": {
-          "en-US": "/blog"
+          "en-US": "blog"
         }
       }
     },
@@ -4769,7 +4769,7 @@
           "en-US": "Style Guide"
         },
         "slug": {
-          "en-US": "/style-guide"
+          "en-US": "style-guide"
         },
         "subtitle": {
           "en-US": "The style guide provides you with a blueprint of default post and page styles. The style guide is also a great reference for suggested typographic treatment and styles for your content."
@@ -4838,7 +4838,7 @@
           "en-US": "Release Notes - Azimuth Improvements and New Integrations"
         },
         "slug": {
-          "en-US": "/posts/Azimuth-Improvements"
+          "en-US": "azimuth-improvements"
         },
         "subtitle": {
           "en-US": "Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. "
@@ -4922,7 +4922,7 @@
           "en-US": "About Us"
         },
         "slug": {
-          "en-US": "/about"
+          "en-US": "about"
         },
         "subtitle": {
           "en-US": "This is an optional subtitle. It can be used to describe what this page is about."
@@ -5000,7 +5000,7 @@
           "en-US": "Customer Loyalty Programs That Stick"
         },
         "slug": {
-          "en-US": "/posts/Customer-Loyalty"
+          "en-US": "customer-loyalty"
         },
         "subtitle": {
           "en-US": "A story about customer loyalty"
@@ -5093,7 +5093,7 @@
           "en-US": "5 Customer Service Skills that Every Employee Needs"
         },
         "slug": {
-          "en-US": "/posts/Customer-Service-Skills-that-Every-Employee-Needs"
+          "en-US": "customer-service-skills-that-every-employee-needs"
         },
         "subtitle": {
           "en-US": "Apparently, there are 5 Service Skills that Every Employee Needs"
@@ -5186,7 +5186,7 @@
           "en-US": "Behind the Scenes - The Design of Azimuth"
         },
         "slug": {
-          "en-US": "/posts/Design-Azimuth"
+          "en-US": "design-azimuth"
         },
         "date": {
           "en-US": "2018-01-09"
@@ -5276,7 +5276,7 @@
           "en-US": "How Our Design Team Collaborates"
         },
         "slug": {
-          "en-US": "/posts/Design-Team-Collaborates"
+          "en-US": "design-team-collaborates"
         },
         "date": {
           "en-US": "2019-03-24"
@@ -5366,7 +5366,7 @@
           "en-US": "Sales as a Service"
         },
         "slug": {
-          "en-US": "/posts/Sales-as-Service"
+          "en-US": "sales-as-service"
         },
         "subtitle": {
           "en-US": "A interesting tale about Sales"
@@ -5459,10 +5459,10 @@
           "en-US": "Why You Should Set Big Goals"
         },
         "slug": {
-          "en-US": "/posts/Set-Big-Goals"
+          "en-US": "set-big-goals"
         },
         "subtitle": {
-          "en-US": "/posts/Set-Big-Goals"
+          "en-US": "Set Big Goals"
         },
         "date": {
           "en-US": "2019-03-10"
@@ -5552,7 +5552,7 @@
           "en-US": "A Guide To User Journey Mapping"
         },
         "slug": {
-          "en-US": "/posts/User-Journey-Mapping"
+          "en-US": "user-journey-mapping"
         },
         "subtitle": {
           "en-US": "Praesent ut cursus enim, sit amet dictum turpis. Etiam justo orci, consectetur aliquet rhoncus sed, hendrerit vel odio."
@@ -5645,7 +5645,7 @@
           "en-US": "The Advantages and Disadvantages of Working from Home"
         },
         "slug": {
-          "en-US": "/posts/working-from-home"
+          "en-US": "working-from-home"
         },
         "date": {
           "en-US": "2019-04-22"
@@ -5735,7 +5735,7 @@
           "en-US": "Sign Up"
         },
         "slug": {
-          "en-US": "/signup"
+          "en-US": "signup"
         },
         "subtitle": {
           "en-US": "This is an optional subtitle. It can be used to describe what this page is about."
@@ -5939,7 +5939,7 @@
           "en-US": "Contact"
         },
         "slug": {
-          "en-US": "/contact"
+          "en-US": "contact"
         },
         "sections": {
           "en-US": [
@@ -7698,7 +7698,7 @@
           "en-US": "Features"
         },
         "slug": {
-          "en-US": "/features"
+          "en-US": "features"
         },
         "sections": {
           "en-US": [
@@ -8701,7 +8701,7 @@
           "en-US": "Pricing"
         },
         "slug": {
-          "en-US": "/pricing"
+          "en-US": "pricing"
         },
         "sections": {
           "en-US": [

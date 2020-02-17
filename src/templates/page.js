@@ -6,11 +6,11 @@ import {Layout} from '../components/index';
 import {markdownify} from '../utils';
 
 export const query = graphql`
-  query PageQuery($slug: String!) {
+  query PageQuery($contentfulId: String!) {
     contentfulConfig {
       ...LayoutFragment
     }
-    contentfulPage(slug: { eq: $slug }) {
+    contentfulPage(contentful_id: { eq: $contentfulId }) {
       sys {
         contentType {
           sys {

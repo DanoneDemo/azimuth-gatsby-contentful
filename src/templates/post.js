@@ -7,11 +7,11 @@ import {Layout} from '../components/index';
 import {markdownify} from '../utils';
 
 export const query = graphql`
-  query PostQuery($slug: String!) {
+  query PostQuery($contentfulId: String!) {
     contentfulConfig {
       ...LayoutFragment
     }
-    contentfulPost(slug: { eq: $slug }) {
+    contentfulPost(contentful_id: { eq: $contentfulId }) {
       sys {
         contentType {
           sys {

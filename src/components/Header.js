@@ -54,7 +54,7 @@ export default class Header extends React.Component {
                                         </button>
                                         <ul className="menu">
                                             {_.map(_.get(this.props, 'config.header.nav_links'), (action, action_idx) => (
-                                                <li key={action_idx} className={'menu-item' + ((_.get(this.props, 'page.slug') === _.get(action, 'url.url')) ? ' current-menu-item' : '') + (_.get(action, 'primary') ? ' menu-button' : '')}>
+                                                <li key={action_idx} className={'menu-item' + ((_.trim(_.get(this.props, 'path'), '/') === _.trim(_.get(action, 'url.url'), '/')) ? ' current-menu-item' : '') + (_.get(action, 'primary') ? ' menu-button' : '')}>
                                                     <Action action={action} className={(_.get(action, 'primary') ? 'button' : '')}/>
                                                 </li>
                                             ))}

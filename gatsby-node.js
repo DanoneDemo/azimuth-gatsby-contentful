@@ -12,6 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
     const pageFields = `
     edges {
       node {
+        contentful_id
         sys {
           contentType {
             sys {
@@ -53,15 +54,18 @@ exports.createPages = ({ graphql, actions }) => {
         );
 
         pageNodes.forEach(node => {
-            const url = node.slug;
             const template = node.sys.contentType.sys.id;
+            const contentfulId = node.contentful_id;
             const component = path.resolve(`./src/templates/${template}.js`);
+            const slug = node.slug;
+            const pagePath = template === 'post' ? `posts/${_.trim(slug, '/')}` : slug;
 
             const page = {
-                path: url,
+                path: pagePath,
                 component: component,
                 context: {
-                    slug: url
+                    contentfulId: contentfulId,
+                    slug: slug
                 }
             };
 

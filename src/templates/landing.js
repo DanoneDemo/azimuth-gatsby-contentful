@@ -5,11 +5,11 @@ import {graphql} from 'gatsby';
 import components, {Layout} from '../components/index';
 
 export const query = graphql`
-  query LandingQuery($slug: String!) {
+  query LandingQuery($contentfulId: String!) {
     contentfulConfig {
       ...LayoutFragment
     }
-    contentfulLanding(slug: { eq: $slug }) {
+    contentfulLanding(contentful_id: { eq: $contentfulId }) {
       sys {
         contentType {
           sys {
@@ -59,7 +59,7 @@ export default class Landing extends React.Component {
         const config = _.get(this.props, 'data.contentfulConfig');
         const page = _.get(this.props, 'data.contentfulLanding');
         return (
-            <Layout page={page} config={config}>
+            <Layout page={page} config={config} path={this.props.path}>
                 {_.map(_.get(page, 'sections'), (section, section_idx) => {
                     let component = _.upperFirst(_.camelCase(_.get(section, 'sys.contentType.sys.id')));
                     let Component = components[component];
